@@ -1,0 +1,38 @@
+name: Template Service
+description: Generic Template service for The Collective
+capabilities: 
+  - Templating
+  - Something Else
+
+api:
+  commands:
+    synchronous:
+      - methoda()
+      - methodb()
+    asynchronous:
+      - methodc()
+      - methodd()
+  queries:
+    - querya
+  events_published:
+    - Object Created event
+    - Object Deleted event
+  non_functional_requirements:
+    - 99.95% availability
+    - 1000 orders/sec
+
+observability:
+  keymetrics:
+    - metrica
+    - metriab
+  healthcheckendpoint: /actuator/template-service-health
+
+implementation:
+  domain_model:
+    - Something aggregate
+
+dependencies:
+  invokes:
+    - servicea > operation
+  subscribesto:
+    - object created event
