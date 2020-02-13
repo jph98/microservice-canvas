@@ -1,5 +1,5 @@
 name: Template Service
-description: Generic Template service for The Collective
+description: Generic Template service
 capabilities: 
   - Templating
   - Something Else

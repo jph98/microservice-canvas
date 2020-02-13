@@ -1,5 +1,5 @@
 name: Locking Service
-description: Generic locking service for The Collective - wraps the Salto locking solution.
+description: Generic locking service.
 capabilities: 
   - Lock Management
   - Something Else
