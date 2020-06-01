@@ -11,9 +11,9 @@ TEMPLATE_FILE = "template/template.html"
 OUTPUT_DIR = "output/"
 SUFFIX = "-service.html"
 
-def process_service_definition(s):
+def process_service_definition(template, service):
     
-    data = yaml.safe_load(open(s, 'r'))
+    data = yaml.safe_load(open(template, 'r'))
 
     templateLoader = jinja2.FileSystemLoader(searchpath = "./")
 
@@ -22,13 +22,16 @@ def process_service_definition(s):
     template = env.get_template(TEMPLATE_FILE)
     output = template.render(data)
 
-    of = open(OUTPUT_DIR + domain + SUFFIX, 'w')
+    output_file = OUTPUT_DIR + service + SUFFIX
+    of = open(output_file, 'w')
     of.write(output)
+    print('Wrote %s ' % output_file)
 
 if __name__ == "__main__":
 
-    services = glob.glob('services/*-service.yml')
+    templates = glob.glob('services/*-service.yml')
 
-    for s in services:
-        domain = re.search("services/(.*)-service.yml", s).group(1)
-        print("Processing: %s " % domain)
+    for tmpl in templates:
+        service = re.search("services/(.*)-service.yml", tmpl).group(1)
+        print("Processing: %s " % service)
+        process_service_definition(tmpl, service)

@@ -9,11 +9,19 @@ Service map tool is a small tool for mapping out (micro) service architecture in
 
 2. To process this and produce HTML documentation run:
 
+make generate
+
+and to serve this locally:
+
 ```
-generate.py 
+make start
 ```
 
-You can customise the template withy editing:
+![Screenshot](./screenshot.png "Screenshot")
+
+# Service Template Editing
+
+You can customise the template by  editing:
 
 ```
 template/template.html

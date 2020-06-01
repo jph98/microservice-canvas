@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Service Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+        .container {
+            max-width: 80%;
+            padding-top: 100px;
+        }
+
+        h2 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h2>Locking Service </h2>
+
+        <h4>Description and Capabilities</h3>
+        <p>Generic locking service.</p>
+        
+            <span class="btn btn-outline-dark">Lock Management</span>            
+        
+            <span class="btn btn-outline-dark">Something Else</span>            
+        
+        <p></p>
+
+        <h4>Commands</h4>
+        <table id="commands" class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th><b>Synchronous</b></th>
+                    <th><b>Asynchronous</b></th>                
+                </tr>
+            </thead>
+            
+            <tr>
+                <td style="width: 50%">
+                    
+                        methoda()<br/>
+                    
+                        methodb()<br/>
+                    
+                </td style="width: 50%">
+
+                <td style="width: 50%">
+                    
+                        methodc()<br/>
+                    
+                        methodd()<br/>
+                    <br/>
+                </td style="width: 50%">
+            </tr>
+        </table>
+
+        <table id="queriesevents" class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th><b>Queries</b></th>
+                        <th><b>Events Published</b></th>                
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td style="width: 50%">
+                        
+                            querya<br/>
+                        
+                    </td style="width: 50%">
+    
+                    <td style="width: 50%">
+                        
+                            Object Created event<br/>
+                        
+                            Object Deleted event<br/>
+                        
+                    </td style="width: 50%">
+                    </td style="width: 50%">
+                </tr>
+            </table>
+            </tr>
+        </table>
+
+        <h4>Non Functional Requirements</h4>
+        <table id="nfrs" class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th><b>Requirement</b></th>                    
+                </tr>
+            </thead>
+            <tr>
+                <td style="width: 50%">
+                    
+                        99.95% availability<br/>
+                    
+                        1000 orders/sec<br/>
+                    
+                </td style="width: 50%">
+            </tr>
+        </table>
+
+        <h4>Observability</h4>
+        <table id="metrics" class="table table-bordered">
+            
+            <thead class="thead-dark">
+                <tr>
+                    <th><b>Metric</b></th>                    
+                </tr>
+            </thead>
+            <tr>
+                <td style="width: 50%">
+                    
+                        metrica<br/>
+                    
+                        metriab<br/>
+                    
+                </td style="width: 50%">
+            </tr>
+        </table>
+
+        <h4>Health Check Endpoint</h4>         
+        <table id="Domain Model" class="table table-bordered">
+            <tr>
+                <td style="width: 50%">
+                    /actuator/locking-service-health
+                </td style="width: 50%">
+            </tr>
+        </table>
+
+        <h4>Implementation</h4>
+        
+        <table id="Domain Model" class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th><b>Item</b></th>                    
+                </tr>
+            </thead>
+            <tr>
+                <td style="width: 50%">
+                    
+                        Something aggregate<br/>
+                    
+                </td style="width: 50%">
+            </tr>
+        </table>
+
+        <h4>Dependencies</h4>
+        <table id="dependencies" class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th><b>Invokes</b></th>
+                        <th><b>Subscribes To</b></th>                
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td style="width: 50%">
+                        
+                            servicea > operation<br/>
+                        
+                    </td style="width: 50%">
+    
+                    <td style="width: 50%">
+                        
+                            object created event<br/>
+                        
+                    </td style="width: 50%">
+                    </td style="width: 50%">
+                </tr>
+            </table>
+            </tr>
+        </table>
+
+    </div>
+        
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
